@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    overflow: hidden;
+}
+.sky
+{
+    background: url("project1_img/sky.jpg");
+    background-repeat: repeat-x;
+    position: absolute;
+    height: 1349px;
+    width: 100%;
+  bottom: -32px;
+ 
+}
+#bird{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    top: 50vh;
+   
+ 
+    animation: shakebird linear 15.00003s infinite;
+}
+.grass
+{
+    background: url("project1_img/grass.png");
+background-size: cover;
+background-repeat: repeat;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 52vh;
+     animation: shakegrass linear .3s infinite;
+}
+#girl{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    top: 50vh;
+    left: 1150px;
+    animation: shake linear .3s infinite;
+}
+#boy{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    top: 70vh;
+   
+
+     animation: shakeboy linear 10.00003s infinite; /* this time is the total time of motion i.e. on screen and back screen. It dec. object moves faster*/
+}
+
+@keyframes shakeboy
+{
+      0%{
+        transform: translateX(-10vw);  /* from 100 to 0, object moves back screen. So, this is the distance covered backscreen*/
+    }
+    100%{
+        transform: translateX(100vw);  /* from 0 to 100, object moves on screen. So, this is the distance covered on screen*/
+    }
+}
+@keyframes shakebird
+{
+      0%{
+        transform: translateX(-10vw);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
